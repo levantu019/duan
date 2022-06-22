@@ -1,0 +1,48 @@
+version: '3'
+
+# NETWORK
+networks: 
+  my-network:
+    driver: bridge
+
+# VOLUMES
+# volumes:
+#   dir-site:
+#     driver_opts:
+#       type: "nfs"
+#       device: /nckh/
+#       o: bind
+
+services:
+  # CONTAINER DATABASE POSTGRES
+  db:
+    image: mdillon/postgis:latest
+    environment:
+      - POSTGRES_DB=duan
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    networks:
+      - my-network
+    ports:
+      - '5432:5432'
+  # CONTAINER WEB DJANGO
+  web:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./duan:/duan_be
+    environment:
+      - POSTGRES_NAME=duan
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    networks:
+      - my-network
+    command:
+      sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8000"
+    depends_on:
+      - db
