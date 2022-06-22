@@ -44,7 +44,7 @@ class BDViewSet(viewsets.ModelViewSet):
     queryset = BienDao.objects.all()
     serializer_class = BDSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = BienDao.maDoiTuong.field.choices
@@ -58,7 +58,7 @@ class DViewSet(viewsets.ModelViewSet):
     queryset = Dao.objects.all()
     serializer_class = DSerializer
 
-    @action(method=['get'], detail=False, url_path='loaittxl')
+    @action(methods=['get'], detail=False, url_path='loaittxl')
     def choices_loaiTrangThaiXuatLo(self, request):
         try:
             choices = Dao.loaiTrangThaiXuatLo.field.choices
@@ -72,7 +72,7 @@ class BBViewSet(viewsets.ModelViewSet):
     queryset = BaiBoi.objects.all()
     serializer_class = BBSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = BaiBoi.maDoiTuong.field.choices
@@ -80,7 +80,7 @@ class BBViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loaibaiboi')
+    @action(methods=['get'], detail=False, url_path='loaibaiboi')
     def choices_loaiBaiBoi(self, request):
         try:
             choices = BaiBoi.loaiBaiBoi.field.choices
@@ -88,7 +88,7 @@ class BBViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='ttxl')
+    @action(methods=['get'], detail=False, url_path='ttxl')
     def choices_trangThaiXuatLo(self, request):
         try:
             choices = BaiBoi.trangThaiXuatLo.field.choices
@@ -102,7 +102,7 @@ class BDDNViewSet(viewsets.ModelViewSet):
     queryset = BaiDaDuoiNuoc.objects.all()
     serializer_class = BDDNSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = BaiDaDuoiNuoc.maDoiTuong.field.choices
@@ -110,7 +110,7 @@ class BDDNViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='ttxl')
+    @action(methods=['get'], detail=False, url_path='ttxl')
     def choices_trangThaiXuatLo(self, request):
         try:
             choices = BaiDaDuoiNuoc.trangThaiXuatLo.field.choices
@@ -124,7 +124,7 @@ class NNViewSet(viewsets.ModelViewSet):
     queryset = NguonNuoc.objects.all()
     serializer_class = NNSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = NguonNuoc.maDoiTuong.field.choices
@@ -132,7 +132,7 @@ class NNViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loainguonnuoc')
+    @action(methods=['get'], detail=False, url_path='loainguonnuoc')
     def choices_loaiNguonNuoc(self, request):
         try:
             choices = NguonNuoc.loaiNguonNuoc.field.choices
@@ -146,7 +146,7 @@ class DDCMNViewSet(viewsets.ModelViewSet):
     queryset = DiemDoCaoMucNuoc.objects.all()
     serializer_class = DDCMNSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = DiemDoCaoMucNuoc.maDoiTuong.field.choices
@@ -160,7 +160,7 @@ class DBNViewSet(viewsets.ModelViewSet):
     queryset = DuongBoNuoc.objects.all()
     serializer_class = DBNSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = DuongBoNuoc.maDoiTuong.field.choices
@@ -168,7 +168,7 @@ class DBNViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loaittdbn')
+    @action(methods=['get'], detail=False, url_path='loaittdbn')
     def choices_loaiTrangThaiDuongBoNuoc(self, request):
         try:
             choices = DuongBoNuoc.loaiTrangThaiDuongBoNuoc.field.choices
@@ -176,7 +176,7 @@ class DBNViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loaidbn')
+    @action(methods=['get'], detail=False, url_path='loaidbn')
     def choices_loaiDuongBoNuoc(self, request):
         try:
             choices = DuongBoNuoc.loaiDuongBoNuoc.field.choices
@@ -190,7 +190,7 @@ class DMNViewSet(viewsets.ModelViewSet):
     queryset = DuongMepNuoc.objects.all()
     serializer_class = DMNSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = DuongMepNuoc.maDoiTuong.field.choices
@@ -198,7 +198,7 @@ class DMNViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loaidmn')
+    @action(methods=['get'], detail=False, url_path='loaidmn')
     def choices_loaiDuongMepNuoc(self, request):
         try:
             choices = DuongMepNuoc.loaiDuongMepNuoc.field.choices
@@ -212,7 +212,7 @@ class RGNMQUViewSet(viewsets.ModelViewSet):
     queryset = RanhGioiNuocMatQuyUoc.objects.all()
     serializer_class = RGNMQUSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = RanhGioiNuocMatQuyUoc.maDoiTuong.field.choices
@@ -220,7 +220,7 @@ class RGNMQUViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loairgnmqu')
+    @action(methods=['get'], detail=False, url_path='loairgnmqu')
     def choices_loaiRanhGioiNuocMatQuyUoc(self, request):
         try:
             choices = RanhGioiNuocMatQuyUoc.loaiRanhGioiNuocMatQuyUoc.field.choices
@@ -234,7 +234,7 @@ class BKBCViewSet(viewsets.ModelViewSet):
     queryset = BoKeBoCap.objects.all()
     serializer_class = BKBCSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = BoKeBoCap.maDoiTuong.field.choices
@@ -242,7 +242,7 @@ class BKBCViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loaichatlieu')
+    @action(methods=['get'], detail=False, url_path='loaichatlieu')
     def choices_loaiChatLieu(self, request):
         try:
             choices = BoKeBoCap.loaiChatLieu.field.choices
@@ -250,7 +250,7 @@ class BKBCViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loaithanhphan')
+    @action(methods=['get'], detail=False, url_path='loaithanhphan')
     def choices_loaiThanhPhan(self, request):
         try:
             choices = BoKeBoCap.loaiThanhPhan.field.choices
@@ -264,7 +264,7 @@ class KMViewSet(viewsets.ModelViewSet):
     queryset = KenhMuong.objects.all()
     serializer_class = KMSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = KenhMuong.maDoiTuong.field.choices
@@ -272,7 +272,7 @@ class KMViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loaihtsd')
+    @action(methods=['get'], detail=False, url_path='loaihtsd')
     def choices_loaiHienTrangSuDung(self, request):
         try:
             choices = KenhMuong.loaiHienTrangSuDung.field.choices
@@ -286,7 +286,7 @@ class TTTTTTVViewSet(viewsets.ModelViewSet):
     queryset = TramThuThapKTTV.objects.all()
     serializer_class = TTTTTTVSerializer
 
-    @action(method=['get'], detail=False, url_path='matkttv')
+    @action(methods=['get'], detail=False, url_path='matkttv')
     def choices_maTramKTTV(self, request):
         try:
             choices = TramThuThapKTTV.maTramKTTV.field.choices
@@ -294,7 +294,7 @@ class TTTTTTVViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loaitttkttv')
+    @action(methods=['get'], detail=False, url_path='loaitttkttv')
     def choices_loaiTramThuThapKTTV(self, request):
         try:
             choices = TramThuThapKTTV.loaiTramThuThapKTTV.field.choices
@@ -302,7 +302,7 @@ class TTTTTTVViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='kieuthuthapkttv')
+    @action(methods=['get'], detail=False, url_path='kieuthuthapkttv')
     def choices_kieuThuThapKTTV(self, request):
         try:
             choices = TramThuThapKTTV.kieuThuThapKTTV.field.choices
@@ -316,7 +316,7 @@ class TSKTTVViewSet(viewsets.ModelViewSet):
     queryset = ThamSoKTTV.objects.all()
     serializer_class = TSKTTVSerializer
 
-    @action(method=['get'], detail=False, url_path='matskttv')
+    @action(methods=['get'], detail=False, url_path='matskttv')
     def choices_maThamSoKTTV(self, request):
         try:
             choices = ThamSoKTTV.maThamSoKTTV.field.choices
@@ -324,7 +324,7 @@ class TSKTTVViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='thamso')
+    @action(methods=['get'], detail=False, url_path='thamso')
     def choices_thamSo(self, request):
         try:
             choices = ThamSoKTTV.thamSo.field.choices
@@ -338,7 +338,7 @@ class SGDCViewSet(viewsets.ModelViewSet):
     queryset = SongGioDongChay.objects.all()
     serializer_class = SGDCSerializer
 
-    @action(method=['get'], detail=False, url_path='masgdc')
+    @action(methods=['get'], detail=False, url_path='masgdc')
     def choices_maSongGioDongChay(self, request):
         try:
             choices = SongGioDongChay.maSongGioDongChay.field.choices
@@ -346,7 +346,7 @@ class SGDCViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='huong')
+    @action(methods=['get'], detail=False, url_path='huong')
     def choices_huong(self, request):
         try:
             choices = SongGioDongChay.huongThang1.field.choices
@@ -354,7 +354,7 @@ class SGDCViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='thamso')
+    @action(methods=['get'], detail=False, url_path='thamso')
     def choices_thamSo(self, request):
         try:
             choices = SongGioDongChay.thamSo.field.choices
@@ -368,7 +368,7 @@ class TSNViewSet(viewsets.ModelViewSet):
     queryset = ThamSoNuoc.objects.all()
     serializer_class = TSNSerializer
 
-    @action(method=['get'], detail=False, url_path='matsnuoc')
+    @action(methods=['get'], detail=False, url_path='matsnuoc')
     def choices_maThamSoNuoc(self, request):
         try:
             choices = ThamSoNuoc.maThamSoNuoc.field.choices
@@ -376,7 +376,7 @@ class TSNViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='tangdosau')
+    @action(methods=['get'], detail=False, url_path='tangdosau')
     def choices_tangDoSau(self, request):
         try:
             choices = ThamSoNuoc.tangDoSau.field.choices
@@ -384,7 +384,7 @@ class TSNViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='thamso')
+    @action(methods=['get'], detail=False, url_path='thamso')
     def choices_thamSo(self, request):
         try:
             choices = ThamSoNuoc.thamSo.field.choices

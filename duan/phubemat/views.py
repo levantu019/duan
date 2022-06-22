@@ -29,7 +29,7 @@ class CDLViewSet(viewsets.ModelViewSet):
     queryset = CayDocLap.objects.all()
     serializer_class = CDLSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = CayDocLap.maDoiTuong.field.choices
@@ -43,7 +43,7 @@ class CDLViewSet(viewsets.ModelViewSet):
     queryset = RanhGioiPhuBeMat.objects.all()
     serializer_class = RGPBMSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = RanhGioiPhuBeMat.maDoiTuong.field.choices
@@ -51,7 +51,7 @@ class CDLViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='loairgpbm')
+    @action(methods=['get'], detail=False, url_path='loairgpbm')
     def choices_loaiRanhGioiPhuBeMat(self, request):
         try:
             choices = RanhGioiPhuBeMat.loaiRanhGioiPhuBeMat.field.choices
@@ -65,7 +65,7 @@ class CDLViewSet(viewsets.ModelViewSet):
     queryset = BeMatCongTrinh.objects.all()
     serializer_class = BMCTSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = BeMatCongTrinh.maDoiTuong.field.choices
@@ -79,7 +79,7 @@ class CDLViewSet(viewsets.ModelViewSet):
     queryset = BeMatKhuDanCu.objects.all()
     serializer_class = BMKDCSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = BeMatKhuDanCu.maDoiTuong.field.choices
@@ -87,7 +87,7 @@ class CDLViewSet(viewsets.ModelViewSet):
         except:
             return Response(status=status.HTTP_400_BAD_REQUEST)
 
-    @action(method=['get'], detail=False, url_path='thucvat')
+    @action(methods=['get'], detail=False, url_path='thucvat')
     def choices_thucVat(self, request):
         try:
             choices = BeMatKhuDanCu.thucVat.field.choices
@@ -101,7 +101,7 @@ class CDLViewSet(viewsets.ModelViewSet):
     queryset = DatTrong.objects.all()
     serializer_class = DTSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = DatTrong.maDoiTuong.field.choices
@@ -115,7 +115,7 @@ class CDLViewSet(viewsets.ModelViewSet):
     queryset = NuocMat.objects.all()
     serializer_class = NMSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = NuocMat.maDoiTuong.field.choices
@@ -129,7 +129,7 @@ class CDLViewSet(viewsets.ModelViewSet):
     queryset = ThucVatDayBien.objects.all()
     serializer_class = TVDBSerializer
 
-    @action(method=['get'], detail=False, url_path='madoituong')
+    @action(methods=['get'], detail=False, url_path='madoituong')
     def choices_maDoiTuong(self, request):
         try:
             choices = ThucVatDayBien.maDoiTuong.field.choices

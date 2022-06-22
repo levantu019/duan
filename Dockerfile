@@ -1,4 +1,4 @@
-FROM python:3.9.13-slim-buster
+FROM thinkwhere/gdal-python:latest
 
 ENV PYTHONUNBUFFERED 1
 
