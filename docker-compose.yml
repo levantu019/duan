@@ -1,17 +1,9 @@
-version: '3'
+version: "3.9"
 
 # NETWORK
 networks: 
   my-network:
     driver: bridge
-
-# VOLUMES
-# volumes:
-#   dir-site:
-#     driver_opts:
-#       type: "nfs"
-#       device: /nckh/
-#       o: bind
 
 services:
   # CONTAINER DATABASE POSTGRES
