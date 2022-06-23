@@ -1,10 +1,5 @@
 version: "3.9"
 
-# NETWORK
-networks: 
-  my-network:
-    driver: bridge
-
 services:
   # CONTAINER DATABASE POSTGRES
   db:
@@ -13,10 +8,6 @@ services:
       - POSTGRES_DB=duan
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin
-    networks:
-      - my-network
-    ports:
-      - '5432:5432'
   # CONTAINER WEB DJANGO
   web:
     build:
@@ -30,8 +21,6 @@ services:
       - POSTGRES_NAME=duan
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin
-    networks:
-      - my-network
     command:
       sh -c "python manage.py makemigrations &&
              python manage.py migrate &&
