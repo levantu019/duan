@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-      'ENGINE': 'django.contrib.gis.db.backends.postgis',
+      'ENGINE': 'django.db.backends.postgresql',
       'NAME': os.environ.get('POSTGRES_NAME'),
       'USER': os.environ.get('POSTGRES_USER'),
       'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
@@ -92,6 +92,17 @@ DATABASES = {
       'PORT': '5432',
    }
 }
+
+# DATABASES = {
+#     'default': {
+#       'ENGINE': 'django.db.backends.postgresql',
+#       'NAME': 'duanDB',
+#       'USER': 'postgres',
+#       'PASSWORD': 'admin',
+#       'HOST': 'localhost',
+#       'PORT': '5432',
+#    }
+# }
 
 
 # Password validation
