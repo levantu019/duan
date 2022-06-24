@@ -1,4 +1,4 @@
-FROM mypython:v1
+FROM thinkwhere/gdal-python:latest
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
