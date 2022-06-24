@@ -8,8 +8,6 @@ services:
       - POSTGRES_DB=duan
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin
-    ports:
-      - "5432:5432"
   # CONTAINER WEB DJANGO
   web:
     build:
@@ -18,7 +16,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./duan:/duan_be
+      - ./duan:/duan
     environment:
       - POSTGRES_NAME=duan
       - POSTGRES_USER=postgres
