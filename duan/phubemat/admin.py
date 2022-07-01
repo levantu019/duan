@@ -8,13 +8,14 @@ from .models import (
     NuocMat,
     ThucVatDayBien
 )
+from nendialy.admin import CustomGeoAdmin
 
 
 # Register
-admin.site.register(CayDocLap)
-admin.site.register(RanhGioiPhuBeMat)
-admin.site.register(BeMatCongTrinh)
-admin.site.register(BeMatKhuDanCu)
-admin.site.register(DatTrong)
-admin.site.register(NuocMat)
-admin.site.register(ThucVatDayBien)
+admin.site.register(CayDocLap, CustomGeoAdmin)
+admin.site.register(RanhGioiPhuBeMat, CustomGeoAdmin)
+admin.site.register(BeMatCongTrinh, CustomGeoAdmin)
+admin.site.register(BeMatKhuDanCu, CustomGeoAdmin)
+admin.site.register(DatTrong, CustomGeoAdmin)
+admin.site.register(NuocMat, CustomGeoAdmin)
+admin.site.register(ThucVatDayBien, CustomGeoAdmin)

@@ -38,8 +38,11 @@ from .serializers import (
     SGDCSerializer,
     TSNSerializer
 )
+from nendialy.decorators import http_methods_disable
+
 
 # 1. Biển đảo
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class BDViewSet(viewsets.ModelViewSet):
     queryset = BienDao.objects.all()
     serializer_class = BDSerializer
@@ -54,6 +57,7 @@ class BDViewSet(viewsets.ModelViewSet):
 
     
 # 2. Đảo
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DViewSet(viewsets.ModelViewSet):
     queryset = Dao.objects.all()
     serializer_class = DSerializer
@@ -68,6 +72,7 @@ class DViewSet(viewsets.ModelViewSet):
 
 
 # 3. Bãi bồi
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class BBViewSet(viewsets.ModelViewSet):
     queryset = BaiBoi.objects.all()
     serializer_class = BBSerializer
@@ -98,6 +103,7 @@ class BBViewSet(viewsets.ModelViewSet):
 
 
 # 4. Bãi đá dưới nước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class BDDNViewSet(viewsets.ModelViewSet):
     queryset = BaiDaDuoiNuoc.objects.all()
     serializer_class = BDDNSerializer
@@ -120,6 +126,7 @@ class BDDNViewSet(viewsets.ModelViewSet):
 
 
 # 5. Nguồn nước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class NNViewSet(viewsets.ModelViewSet):
     queryset = NguonNuoc.objects.all()
     serializer_class = NNSerializer
@@ -142,6 +149,7 @@ class NNViewSet(viewsets.ModelViewSet):
 
 
 # 6. Điểm độ cao mực nước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DDCMNViewSet(viewsets.ModelViewSet):
     queryset = DiemDoCaoMucNuoc.objects.all()
     serializer_class = DDCMNSerializer
@@ -156,6 +164,7 @@ class DDCMNViewSet(viewsets.ModelViewSet):
 
 
 # 7. Đường bờ nước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DBNViewSet(viewsets.ModelViewSet):
     queryset = DuongBoNuoc.objects.all()
     serializer_class = DBNSerializer
@@ -186,6 +195,7 @@ class DBNViewSet(viewsets.ModelViewSet):
 
 
 # 8. Đường mép nước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DMNViewSet(viewsets.ModelViewSet):
     queryset = DuongMepNuoc.objects.all()
     serializer_class = DMNSerializer
@@ -208,6 +218,7 @@ class DMNViewSet(viewsets.ModelViewSet):
 
 
 # 9. Ranh giới nước mặt quy ước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class RGNMQUViewSet(viewsets.ModelViewSet):
     queryset = RanhGioiNuocMatQuyUoc.objects.all()
     serializer_class = RGNMQUSerializer
@@ -230,6 +241,7 @@ class RGNMQUViewSet(viewsets.ModelViewSet):
 
 
 # 10. Bờ kè bờ cạp
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class BKBCViewSet(viewsets.ModelViewSet):
     queryset = BoKeBoCap.objects.all()
     serializer_class = BKBCSerializer
@@ -260,6 +272,7 @@ class BKBCViewSet(viewsets.ModelViewSet):
 
 
 # 11. Kênh mương
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class KMViewSet(viewsets.ModelViewSet):
     queryset = KenhMuong.objects.all()
     serializer_class = KMSerializer
@@ -282,6 +295,7 @@ class KMViewSet(viewsets.ModelViewSet):
 
 
 # 12. Trạm thu thập TTTV
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class TTTTTTVViewSet(viewsets.ModelViewSet):
     queryset = TramThuThapKTTV.objects.all()
     serializer_class = TTTTTTVSerializer
@@ -312,6 +326,7 @@ class TTTTTTVViewSet(viewsets.ModelViewSet):
 
 
 # 13. Tham số KTTV
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class TSKTTVViewSet(viewsets.ModelViewSet):
     queryset = ThamSoKTTV.objects.all()
     serializer_class = TSKTTVSerializer
@@ -334,6 +349,7 @@ class TSKTTVViewSet(viewsets.ModelViewSet):
 
 
 # 14. Số liệu sóng, gió, dòng chảy
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class SGDCViewSet(viewsets.ModelViewSet):
     queryset = SongGioDongChay.objects.all()
     serializer_class = SGDCSerializer
@@ -364,6 +380,7 @@ class SGDCViewSet(viewsets.ModelViewSet):
 
 
 # 15. Tham số nước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class TSNViewSet(viewsets.ModelViewSet):
     queryset = ThamSoNuoc.objects.all()
     serializer_class = TSNSerializer

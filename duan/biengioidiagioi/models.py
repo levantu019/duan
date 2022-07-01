@@ -11,6 +11,7 @@ from nendialy.choices import BienGioiDiaGioi as bgdg
 class VungBien(NenDiaLy2N5N10N):
     class Meta:
         ordering = ['id']
+        verbose_name_plural = 'Vùng biển'
         
     # Fields
     maDoiTuong = models.CharField(max_length=50, choices=bgdg.VB_CHOICES)

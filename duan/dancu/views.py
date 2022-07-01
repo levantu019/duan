@@ -60,8 +60,11 @@ from .serializers import (
     CTANSerializer,
     CTQPSerializer
 )
+from nendialy.decorators import http_methods_disable
+
 
 # 1.Khu dân cư
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class KDCViewSet(viewsets.ModelViewSet):
     queryset = KhuDanCu.objects.all()
     serializer_class = KDCSerializer
@@ -84,6 +87,7 @@ class KDCViewSet(viewsets.ModelViewSet):
 
 
 # 2. Nhà
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class NViewSet(viewsets.ModelViewSet):
     queryset = Nha.objects.all()
     serializer_class = NSerializer
@@ -114,6 +118,7 @@ class NViewSet(viewsets.ModelViewSet):
 
 
 # 3. Công trình phụ trợ
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTPTViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhPhuTro.objects.all()
     serializer_class = CTPTSerializer
@@ -128,6 +133,7 @@ class CTPTViewSet(viewsets.ModelViewSet):
 
 
 # 4. Khối nhà
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class KNViewSet(viewsets.ModelViewSet):
     queryset = KhoiNha.objects.all()
     serializer_class = KNSerializer
@@ -158,6 +164,7 @@ class KNViewSet(viewsets.ModelViewSet):
 
 
 # 5. Địa danh dân cư
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DDDCViewSet(viewsets.ModelViewSet):
     queryset = DiaDanhDanCu.objects.all()
     serializer_class = DDDCSerializer
@@ -180,6 +187,7 @@ class DDDCViewSet(viewsets.ModelViewSet):
 
 
 # 6. Hạ tầng kỹ thuật khác
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class HTKTKViewSet(viewsets.ModelViewSet):
     queryset = HaTangKyThuatKhac.objects.all()
     serializer_class = HTKTKSerializer
@@ -194,6 +202,7 @@ class HTKTKViewSet(viewsets.ModelViewSet):
 
 
 # 7. Trạm khí tượng thuỷ văn quốc gia
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class TKTTVQGiewSet(viewsets.ModelViewSet):
     queryset = TramKhiTuongThuyVanQuocGia.objects.all()
     serializer_class = TKTTVQGSerializer
@@ -216,6 +225,7 @@ class TKTTVQGiewSet(viewsets.ModelViewSet):
 
 
 # 8. Trạm quan trắc môi trường
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class TQTMTViewSet(viewsets.ModelViewSet):
     queryset = TramQuanTracMoiTruong.objects.all()
     serializer_class = TQTMTSerializer
@@ -230,6 +240,7 @@ class TQTMTViewSet(viewsets.ModelViewSet):
 
 
 # 9. Trạm quan trắc tài nguyên nước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class TQTTNNViewSet(viewsets.ModelViewSet):
     queryset = TramQuanTracTaiNguyenNuoc.objects.all()
     serializer_class = TQTTNNSerializer
@@ -244,6 +255,7 @@ class TQTTNNViewSet(viewsets.ModelViewSet):
 
 
 # 10. Đường dây tải điện
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DDTDViewSet(viewsets.ModelViewSet):
     queryset = DuongDayTaiDien.objects.all()
     serializer_class = DDTDSerializer
@@ -258,6 +270,7 @@ class DDTDViewSet(viewsets.ModelViewSet):
 
 
 # 11. Cột điện
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CDViewSet(viewsets.ModelViewSet):
     queryset = CotDien.objects.all()
     serializer_class = COTDIENSerializer
@@ -272,6 +285,7 @@ class CDViewSet(viewsets.ModelViewSet):
 
 
 # 12. Đường ống dẫn
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DODViewSet(viewsets.ModelViewSet):
     queryset = DuongOngDan.objects.all()
     serializer_class = DODSerializer
@@ -294,6 +308,7 @@ class DODViewSet(viewsets.ModelViewSet):
 
 
 # 13. Ranh giới
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class RGViewSet(viewsets.ModelViewSet):
     queryset = RanhGioi.objects.all()
     serializer_class = RGSerializer
@@ -308,6 +323,7 @@ class RGViewSet(viewsets.ModelViewSet):
 
 
 # 14. Công trình y tế
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTYTViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhYTe.objects.all()
     serializer_class = CTYTSerializer
@@ -330,6 +346,7 @@ class CTYTViewSet(viewsets.ModelViewSet):
 
 
 # 15. Công trình giáo dục
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTGDViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhGiaoDuc.objects.all()
     serializer_class = CTGDSerializer
@@ -344,6 +361,7 @@ class CTGDViewSet(viewsets.ModelViewSet):
 
 
 # 16. Công trình thể thao
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTTTViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhTheThao.objects.all()
     serializer_class = CTTTSerializer
@@ -358,6 +376,7 @@ class CTTTViewSet(viewsets.ModelViewSet):
 
 
 # 17. Công trình văn hoá
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTVHViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhVanHoa.objects.all()
     serializer_class = CTVHSerializer
@@ -380,6 +399,7 @@ class CTVHViewSet(viewsets.ModelViewSet):
 
 
 # 18. Công trình thương mại dịch vụ
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTTMDVViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhThuongMaiDichVu.objects.all()
     serializer_class = CTTMDVSerializer
@@ -394,6 +414,7 @@ class CTTMDVViewSet(viewsets.ModelViewSet):
 
 
 # 19. Công trình tôn giáo tín ngưỡng
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTTGTNViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhTonGiaoTinNguong.objects.all()
     serializer_class = CTTGTNSerializer
@@ -416,6 +437,7 @@ class CTTGTNViewSet(viewsets.ModelViewSet):
 
 
 # 20. Trụ sở cơ quan nhà nước
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class TSCQNNViewSet(viewsets.ModelViewSet):
     queryset = TruSoCoQuanNhaNuoc.objects.all()
     serializer_class = TSCQNNSerializer
@@ -430,6 +452,7 @@ class TSCQNNViewSet(viewsets.ModelViewSet):
 
 
 # 21. Công trình công nghiệp
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTCNViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhCongNghiep.objects.all()
     serializer_class = CTCNSerializer
@@ -452,6 +475,7 @@ class CTCNViewSet(viewsets.ModelViewSet):
 
 
 # 22. Cơ sở sản xuất nông lâm nghiệp
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CSSXNLNViewSet(viewsets.ModelViewSet):
     queryset = CoSoSanXuatNongLamNghiep.objects.all()
     serializer_class = CSSXNLNSerializer
@@ -466,6 +490,7 @@ class CSSXNLNViewSet(viewsets.ModelViewSet):
 
 
 # 23. Khu chức năng đặc thù
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class KCNDTViewSet(viewsets.ModelViewSet):
     queryset = KhuChucNangDacThu.objects.all()
     serializer_class = KCNDTSerializer
@@ -480,6 +505,7 @@ class KCNDTViewSet(viewsets.ModelViewSet):
 
 
 # 24. Công trình xử lý chát thải
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTXLCTViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhXuLyChatThai.objects.all()
     serializer_class = CTXLCTSerializer
@@ -494,6 +520,7 @@ class CTXLCTViewSet(viewsets.ModelViewSet):
 
 
 # 25. Công trình an ninh
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTANViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhAnNinh.objects.all()
     serializer_class = CTANSerializer
@@ -508,6 +535,7 @@ class CTANViewSet(viewsets.ModelViewSet):
 
 
 # 26. Công trình quốc phòng
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTQPViewSet(viewsets.ModelViewSet):
     queryset = CongTrinhQuocPhong.objects.all()
     serializer_class = CTQPSerializer

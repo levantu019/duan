@@ -10,6 +10,9 @@ duan/giaothong/__pycache__
 duan/nendialy/__pycache__
 duan/phubemat/__pycache__
 duan/thuyvan/__pycache__
+duan/soanthaokehoach/__pycache__
+duan/media/files/*
+duan/media/images/*
 
 duan/nendialy/choices/__pycache__
 
@@ -22,6 +25,7 @@ duan/giaothong/migrations/*
 duan/nendialy/migrations/*
 duan/phubemat/migrations/*
 duan/thuyvan/migrations/*
+duan/soanthaokehoach/migrations/*
 
 !duan/myauth/migrations/__init__.py
 !duan/biengioidiagioi/migrations/__init__.py
@@ -32,3 +36,7 @@ duan/thuyvan/migrations/*
 !duan/nendialy/migrations/__init__.py
 !duan/phubemat/migrations/__init__.py
 !duan/thuyvan/migrations/__init__.py
+!duan/soanthaokehoach/migrations/__init__.py
+
+# DISABLE JAZZMIN
+duan/templates/admin

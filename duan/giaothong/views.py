@@ -28,9 +28,12 @@ from .serializers import (
     CDTHHHVSerializer,
     NATSerializer
 )
+from nendialy.decorators import http_methods_disable
+
 
 
 # 1. Đường bộ
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DBViewSet(viewsets.ModelViewSet):
     queryset = DuongBo.objects.all()
     serializer_class = DBSerializer
@@ -101,6 +104,7 @@ class DBViewSet(viewsets.ModelViewSet):
 
 
 # 2. Cống giao thông
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CGTViewSet(viewsets.ModelViewSet):
     queryset = CongGiaoThong.objects.all()
     serializer_class = CGTSerializer
@@ -115,6 +119,7 @@ class CGTViewSet(viewsets.ModelViewSet):
 
 
 # 3. Đường băng
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DBANGViewSet(viewsets.ModelViewSet):
     queryset = DuongBang.objects.all()
     serializer_class = DBANGSerializer
@@ -129,6 +134,7 @@ class DBANGViewSet(viewsets.ModelViewSet):
 
 
 # 4. Bãi đáp trực thăng
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class BDTTViewSet(viewsets.ModelViewSet):
     queryset = BaiDapTrucThang.objects.all()
     serializer_class = BDTTSerializer
@@ -151,6 +157,7 @@ class BDTTViewSet(viewsets.ModelViewSet):
 
 
 # 5. Báo hiệu hàng hải AIS
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class BHHHAISViewSet(viewsets.ModelViewSet):
     queryset = BaoHieuHangHaiAIS.objects.all()
     serializer_class = BHHHAISSerializer
@@ -165,6 +172,7 @@ class BHHHAISViewSet(viewsets.ModelViewSet):
 
 
 # 6. Bến cảng
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class BCViewSet(viewsets.ModelViewSet):
     queryset = BenCang.objects.all()
     serializer_class = BCSerializer
@@ -179,6 +187,7 @@ class BCViewSet(viewsets.ModelViewSet):
 
 
 # 7. Cầu tàu
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CTViewSet(viewsets.ModelViewSet):
     queryset = CauTau.objects.all()
     serializer_class = CTSerializer
@@ -201,6 +210,7 @@ class CTViewSet(viewsets.ModelViewSet):
 
 
 # 8. Báo hiệu dẫn luồng hàng hải đường thuỷ
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class BHDLHHDTViewSet(viewsets.ModelViewSet):
     queryset = BaoHieuDanLuongHangHaiDuongThuy.objects.all()
     serializer_class = BHDLHHDTSerializer
@@ -247,6 +257,7 @@ class BHDLHHDTViewSet(viewsets.ModelViewSet):
 
 
 # 9. Các đối tượng hàng hải hải văn
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CDTHHHVViewSet(viewsets.ModelViewSet):
     queryset = CacDoiTuongHangHaiHaiVan.objects.all()
     serializer_class = CDTHHHVSerializer
@@ -261,6 +272,7 @@ class CDTHHHVViewSet(viewsets.ModelViewSet):
 
 
 # 10. Nhóm Âu tàu
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class NATViewSet(viewsets.ModelViewSet):
     queryset = NhomAuTau.objects.all()
     serializer_class = NATSerializer

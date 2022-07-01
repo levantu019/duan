@@ -5,3 +5,4 @@ djangorestframework-gis
 psycopg2
 Pillow
 drf-yasg
+django-jazzmin

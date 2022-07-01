@@ -11,16 +11,17 @@ from .models import (
     CacDoiTuongHangHaiHaiVan,
     NhomAuTau
 )
+from nendialy.admin import CustomGeoAdmin
 
 
 # Register
-admin.site.register(DuongBo)
-admin.site.register(CongGiaoThong)
-admin.site.register(DuongBang)
-admin.site.register(BaiDapTrucThang)
-admin.site.register(BaoHieuHangHaiAIS)
-admin.site.register(BenCang)
-admin.site.register(CauTau)
-admin.site.register(BaoHieuDanLuongHangHaiDuongThuy)
-admin.site.register(CacDoiTuongHangHaiHaiVan)
-admin.site.register(NhomAuTau)
+admin.site.register(DuongBo, CustomGeoAdmin)
+admin.site.register(CongGiaoThong, CustomGeoAdmin)
+admin.site.register(DuongBang, CustomGeoAdmin)
+admin.site.register(BaiDapTrucThang, CustomGeoAdmin)
+admin.site.register(BaoHieuHangHaiAIS, CustomGeoAdmin)
+admin.site.register(BenCang, CustomGeoAdmin)
+admin.site.register(CauTau, CustomGeoAdmin)
+admin.site.register(BaoHieuDanLuongHangHaiDuongThuy, CustomGeoAdmin)
+admin.site.register(CacDoiTuongHangHaiHaiVan, CustomGeoAdmin)
+admin.site.register(NhomAuTau, CustomGeoAdmin)

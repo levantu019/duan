@@ -4,9 +4,9 @@ from .models import (
     DiemDoDacQuocGia,
     TramDinhViVeTinhQuocGia
 )
-
+from nendialy.admin import CustomGeoAdmin
 
 # Register
-admin.site.register(DiemGocDoDacQuocGia)
-admin.site.register(DiemDoDacQuocGia)
-admin.site.register(TramDinhViVeTinhQuocGia)
+admin.site.register(DiemGocDoDacQuocGia, CustomGeoAdmin)
+admin.site.register(DiemDoDacQuocGia, CustomGeoAdmin)
+admin.site.register(TramDinhViVeTinhQuocGia, CustomGeoAdmin)

@@ -16,21 +16,22 @@ from .models import (
     SongGioDongChay,
     ThamSoNuoc
 )
+from nendialy.admin import CustomGeoAdmin
 
 
 # Register
-admin.site.register(BienDao)
-admin.site.register(Dao)
-admin.site.register(BaiBoi)
-admin.site.register(BaiDaDuoiNuoc)
-admin.site.register(NguonNuoc)
-admin.site.register(DiemDoCaoMucNuoc)
-admin.site.register(DuongBoNuoc)
-admin.site.register(DuongMepNuoc)
-admin.site.register(RanhGioiNuocMatQuyUoc)
-admin.site.register(BoKeBoCap)
-admin.site.register(KenhMuong)
-admin.site.register(TramThuThapKTTV)
-admin.site.register(ThamSoKTTV)
-admin.site.register(SongGioDongChay)
-admin.site.register(ThamSoNuoc)
+admin.site.register(BienDao, CustomGeoAdmin)
+admin.site.register(Dao, CustomGeoAdmin)
+admin.site.register(BaiBoi, CustomGeoAdmin)
+admin.site.register(BaiDaDuoiNuoc, CustomGeoAdmin)
+admin.site.register(NguonNuoc, CustomGeoAdmin)
+admin.site.register(DiemDoCaoMucNuoc, CustomGeoAdmin)
+admin.site.register(DuongBoNuoc, CustomGeoAdmin)
+admin.site.register(DuongMepNuoc, CustomGeoAdmin)
+admin.site.register(RanhGioiNuocMatQuyUoc, CustomGeoAdmin)
+admin.site.register(BoKeBoCap, CustomGeoAdmin)
+admin.site.register(KenhMuong, CustomGeoAdmin)
+admin.site.register(TramThuThapKTTV, CustomGeoAdmin)
+admin.site.register(ThamSoKTTV, CustomGeoAdmin)
+admin.site.register(SongGioDongChay, CustomGeoAdmin)
+admin.site.register(ThamSoNuoc, CustomGeoAdmin)

@@ -15,8 +15,11 @@ from .serializers import (
     DRGHCTBSerializer
 )
 
+from nendialy.decorators import http_methods_disable
+
 
 # 1. Vùng biển
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class VBViewSet(viewsets.ModelViewSet):
     queryset = VungBien.objects.all()
     serializer_class = VBSerializer
@@ -31,6 +34,7 @@ class VBViewSet(viewsets.ModelViewSet):
 
 
 # 2. Địa phận hành chính trên biển
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DPHCTBViewSet(viewsets.ModelViewSet):
     queryset = DiaPhanHanhChinhTrenBien.objects.all()
     serializer_class = DPHCTBSerializer
@@ -45,6 +49,7 @@ class DPHCTBViewSet(viewsets.ModelViewSet):
 
 
 # 3. Đường ranh giới hành chính trên biển
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DRGHCTBViewSet(viewsets.ModelViewSet):
     queryset = DuongRanhGioiHanhChinhTrenBien.objects.all()
     serializer_class = DRGHCTBSerializer

@@ -43,9 +43,11 @@ from .serializers import (
     MCDHSerializer,
     LDCSerializer
 )
+from nendialy.decorators import http_methods_disable
 
 
 # 1. Điểm độ cao
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DDCViewSet(viewsets.ModelViewSet):
     queryset = DiemDoCao.objects.all()
     serializer_class = DDCSerializer
@@ -60,6 +62,7 @@ class DDCViewSet(viewsets.ModelViewSet):
 
 
 # 2. Đường bình độ
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DBDViewSet(viewsets.ModelViewSet):
     queryset = DuongBinhDo.objects.all()
     serializer_class = DBDSerializer
@@ -90,6 +93,7 @@ class DBDViewSet(viewsets.ModelViewSet):
 
 
 # 3. Chất đáy
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class CDViewSet(viewsets.ModelViewSet):
     queryset = ChatDay.objects.all()
     serializer_class = CHATDAYSerializer
@@ -112,6 +116,7 @@ class CDViewSet(viewsets.ModelViewSet):
 
 
 # 4. Điểm độ sâu
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DDSViewSet(viewsets.ModelViewSet):
     queryset = DiemDoSau.objects.all()
     serializer_class = DDSSerializer
@@ -126,6 +131,7 @@ class DDSViewSet(viewsets.ModelViewSet):
 
 
 # 5. Đường bình độ sâu
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DBDSViewSet(viewsets.ModelViewSet):
     queryset = DuongBinhDoSau.objects.all()
     serializer_class = DBDSSerializer
@@ -156,6 +162,7 @@ class DBDSViewSet(viewsets.ModelViewSet):
 
 
 # 6. Địa hình đặc biệt đáy biển
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DHDBDBViewSet(viewsets.ModelViewSet):
     queryset = DiaHinhDacBietDayBien.objects.all()
     serializer_class = DHDBDBSerializer
@@ -170,6 +177,7 @@ class DHDBDBViewSet(viewsets.ModelViewSet):
 
 
 # 7. Địa mạo
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DMViewSet(viewsets.ModelViewSet):
     queryset = DiaMao.objects.all()
     serializer_class = DMSerializer
@@ -190,6 +198,7 @@ class DEMGLPViewSet(viewsets.ModelViewSet):
 
 
 # 9. Mô hình số độ cao gốc lớp đường
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DEMGLLViewSet(viewsets.ModelViewSet):
     queryset = MoHinhSoDoCaoGocLopDuong.objects.all()
     serializer_class = DEMGLLSerializer
@@ -204,6 +213,7 @@ class DEMGLLViewSet(viewsets.ModelViewSet):
 
 
 # 10. Mô hình số độ cao gốc lớp vùng
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DEMGLAViewSet(viewsets.ModelViewSet):
     queryset = MoHinhSoDoCaoGocLopVung.objects.all()
     serializer_class = DEMGLASerializer
@@ -218,6 +228,7 @@ class DEMGLAViewSet(viewsets.ModelViewSet):
 
 
 # 11. Mô hình số độ cao gốc lớp vùng biển tập
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class DEMDLVBTViewSet(viewsets.ModelViewSet):
     queryset = MoHinhSoDoCaoGocLopVungBienTap.objects.all()
     serializer_class = DEMDLVBTSerializer
@@ -232,18 +243,21 @@ class DEMDLVBTViewSet(viewsets.ModelViewSet):
 
 
 # 12. Lớp lưới tam giác bất quy tắc (TIN)
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class LTGBQTViewSet(viewsets.ModelViewSet):
     queryset = LopLuoiTamGiacBatQuyTac.objects.all()
     serializer_class = LTGBQTSerializer
 
 
 # 13. Lớp Raster
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class RSTViewSet(viewsets.ModelViewSet):
     queryset = LopRaster.objects.all()
     serializer_class = RSTSerializer
 
 
 # 14. Hố khoan địa chất
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class HKDCViewSet(viewsets.ViewSet, generics.CreateAPIView):
     queryset = HoKhoanDiaChat.objects.all()
     serializer_class = HKDCSerializer
@@ -251,18 +265,21 @@ class HKDCViewSet(viewsets.ViewSet, generics.CreateAPIView):
 
 
 # 15. Số liệu hố khoan địa chất
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class SLHKDCViewSet(viewsets.ModelViewSet):
     queryset = SoLieuHKDC.objects.all()
     serializer_class = SLHKDCSerializer
 
 
 # 16. Mặt cắt điển hình địa chất
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class MCDHViewSet(viewsets.ModelViewSet):
     queryset = MatCatDienHinh.objects.all()
     serializer_class = MCDHSerializer
 
 
 # 17. Loại Địa chất
+@http_methods_disable('post', 'put', 'patch', 'delete')
 class LDCSerializer(viewsets.ModelViewSet):
     queryset = LoaiDiaChat.objects.all()
     serializer_class = LDCSerializer

@@ -1,0 +1,11 @@
+{% extends "gis/openlayers-osm.html" %}
+{% load l10n %}
+
+{% block base_layer %}
+var base_layer = new ol.layer.Tile({
+    source: new ol.source.XYZ({
+        attributions: '<a href="https://www.thunderforest.com/">Thunderforest</a>',
+        url: "http://tile.openstreetmap.org/{z}/{x}/{y}.png"
+    })
+});
+{% endblock %}
